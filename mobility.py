@@ -1,5 +1,5 @@
-import requests
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify
+import clients
 
 app = Flask(__name__)
 
@@ -7,26 +7,12 @@ app = Flask(__name__)
 def hello():
    return "Ciao!"
 
-class BaseBikeClass:
-   NAME = ''
-   BASE_URL = ''
-   METADATA = {}
-
-class Jump(BaseBikeClass):
-   def __init__(self):
-      self.NAME = 'jumpbikes'
-      self.BASE_URL = 'jumpbikes.com/opendata'
-      self.METADATA = {}
-
-   def allBikes(self, region):
-      if region not in ['atx', 'nyc', 'chi', 'sc', 'dc', 'san', 'sac', 'pvd', 'mia']:
-         return "There are no bikes in {0}".format(region)
-      url = "https://{0}.{1}/free_bike_status.json".format(region, self.BASE_URL)
-      r = requests.get(url)
-      data = r.json()
-      return data
-
-Clients = [Jump()]
 @app.route("/<region>/all")
 def all_bikes(region):
-   return jsonify({client.NAME:client.allBikes(region) for client in Clients})
+   try:
+      res = {}
+      for client in clients.get_all():
+         res[client.NAME] = client.all_bikes(region)
+      return jsonify(res)
+   except Exception as e:
+      return jsonify({"error":str(e)})
