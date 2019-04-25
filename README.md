@@ -2,7 +2,7 @@
 Mobility provides users with data visualizations of the frequency of bikes and scooters in US's main regions.  Mobility aggregates GBFS feeds to enable developers to build data visualizations.  Mobility allows developers to leverage the API in order to build client applications that show aggregated bike data.  Currently there are no services that incorporate all the feeds.  This project was inspired by implementing the [WoBike documentation](https://github.com/ubahnverleih/WoBike) into a single service.
 
 
-![Imgur](https://i.imgur.com/ksTpEHQ.gifv)
+![Imgur](https://i.imgur.com/ksTpEHQ.gif)
 
 ## Table of Contents
 - [Overview](https://github.com/Brandon05/mobility/blob/master/README.md#overview)
