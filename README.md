@@ -2,7 +2,7 @@
 Mobility provides users with data visualizations of the frequency of bikes and scooters in US's main regions.  Mobility aggregates GBFS feeds to enable developers to build data visualizations.  Mobility allows developers to leverage the API in order to build client applications that show aggregated bike data.  Currently there are no services that incorporate all the feeds.  This project was inspired by implementing the [WoBike documentation](http://brandonsanchez [3:02 PM] https://github.com/ubahnverleih/WoBike) into a single service.
 
 
-https://imgur.com/ksTpEHQ
+![](https://imgur.com/ksTpEHQ)
 
 ## Table of Contents
 - [Overview](https://github.com/Brandon05/mobility/blob/master/README.md#overview)
@@ -89,20 +89,20 @@ https://imgur.com/ksTpEHQ
 
     $ python3 -i seed.py
 ## Todo
-[ ] Integrate US clients
-    [x] Uber (Jump)
-    [ ] Lyft (Motivate) ;)
-    [ ] Bird
-    [ ] Lime
-    [ ] Spin
-    [ ] Scoot
-[ ] Setup DB 
-    [ ] Cache a days worth of data
-[ ] API
-    [ ] Grab bike by company `/<region>/<company>` e.g /mia/jumpbikes
-    [ ] Support time queries for endpoints `/<region>/all?since={epoch}&until={epoch}`
-    [ ] Filter by type `/<region>/all?type=scooter`
-    [ ] Filter by geohash `/<region>/all?geohash={hash}`
-[ ] Create Docker image
-[ ] Deploy to heroku or now with 1 click
+- [ ] Integrate US clients
+    - [x] Uber (Jump)
+    - [ ] Lyft (Motivate) ;)
+    - [ ] Bird
+    - [ ] Lime
+    - [ ] Spin
+    - [ ] Scoot
+- [ ] Setup DB 
+    - [ ] Cache a days worth of data
+- [ ] API
+    - [ ] Grab bike by company `/<region>/<company>` e.g /mia/jumpbikes
+    - [ ] Support time queries for endpoints `/<region>/all?since={epoch}&until={epoch}`
+    - [ ] Filter by type `/<region>/all?type=scooter`
+    - [ ] Filter by geohash `/<region>/all?geohash={hash}`
+- [ ] Create Docker image
+- [ ] Deploy to heroku or now with 1 click
 
